@@ -1,7 +1,12 @@
 const minNum = 1;
 const maxNum = 100;
 let numOfTries = 0;
-const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+let answer; // Declare answer without initializing it
+
+function startGame() {
+    numOfTries = 0; // Reset the number of tries
+    answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum; // Generate a new random number
+}
 
 function typeWriterEffect(text, element, speed, callback) {
     let index = 0;
@@ -31,28 +36,29 @@ function game() {
 
     if (userInput === answer) {
         inputField.style.border = '2px solid green';
-        displayMessage(`Woohoo got it in ${numOfTries} tries 🎉! See if you can beat that!`);
+        displayMessage(`Woohoo! Got it in ${numOfTries} tries 🎉! See if you can beat that!`);
         setTimeout(function() {
             inputField.style.border = '';
             inputField.value = ""; 
             if (confirm("Wanna play again?")) {
-                location.reload(); 
+                startGame(); // Start a new game
+                displayMessage("Hmmm... I'm thinking of a number between 1 and 100, can you try to guess it?");
             }
-        }, 500);
+        }, 250);
     } else if (userInput < answer) {
         inputField.style.border = '2px solid red';
         displayMessage('Too Low, Try Again!');
         setTimeout(function() {
             inputField.style.border = '';
             inputField.value = ""; 
-        }, 500);
+        }, 250);
     } else {
         inputField.style.border = '2px solid red';
         displayMessage('Too High, Try Again!');
         setTimeout(function() {
             inputField.style.border = '';
             inputField.value = ""; 
-        }, 500);
+        }, 250);
     }
 }
 
@@ -64,6 +70,7 @@ document.querySelector('.input').addEventListener('keypress', function(event) {
 });
 
 window.onload = function() {
+    startGame(); // Initialize the game
     const thoughtsBox = document.querySelector('.thoughts');
     typeWriterEffect("Hmmm... I'm thinking of a number between 1 and 100, can you try to guess it?", thoughtsBox, 50); // Initial typing speed
 };
