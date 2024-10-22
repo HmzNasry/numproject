@@ -44,7 +44,7 @@ function game() {
                 startGame(); // Start a new game
                 displayMessage("Hmmm... I'm thinking of a number between 1 and 100, can you try to guess it?");
             }
-        }, 250);
+        }, 3000);
     } else if (userInput < answer) {
         inputField.style.border = '2px solid red';
         displayMessage('Too Low, Try Again!');
