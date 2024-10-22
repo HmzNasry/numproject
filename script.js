@@ -38,21 +38,21 @@ function game() {
             if (confirm("Wanna play again?")) {
                 location.reload(); 
             }
-        }, 2000);
+        }, 500);
     } else if (userInput < answer) {
         inputField.style.border = '2px solid red';
-        displayMessage('Too Low!');
+        displayMessage('Too Low, Try Again!');
         setTimeout(function() {
             inputField.style.border = '';
             inputField.value = ""; 
         }, 500);
     } else {
         inputField.style.border = '2px solid red';
-        displayMessage('Too High!');
+        displayMessage('Too High, Try Again!');
         setTimeout(function() {
             inputField.style.border = '';
             inputField.value = ""; 
-        }, 4990);
+        }, 500);
     }
 }
 
