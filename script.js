@@ -24,8 +24,8 @@ function typeWriterEffect(text, element, speed, callback) {
 
 function displayMessage(message) {
     const thoughtsBox = document.querySelector('.thoughts');
-    thoughtsBox.textContent = ''; // Clear previous text
-    typeWriterEffect(message, thoughtsBox, 50); // Set typing speed here
+    thoughtsBox.textContent = ''; 
+    typeWriterEffect(message, thoughtsBox, 50); 
 }
 
 function game() {
@@ -36,12 +36,12 @@ function game() {
 
     if (userInput === answer) {
         inputField.style.border = '2px solid green';
-        displayMessage(`Woohoo! Got it in ${numOfTries} tries 🎉 See if you can beat that!`);
+        displayMessage(`Woohoo! You Got it in ${numOfTries} tries 🎉 See if you can beat that!`);
         setTimeout(function() {
             inputField.style.border = '';
             inputField.value = ""; 
             if (confirm("Wanna play again?")) {
-                startGame(); // Start a new game
+                startGame(); 
                 displayMessage("Hmmm... I'm thinking of a number between 1 and 100, can you try to guess it?");
             }
         }, 3000);
@@ -70,7 +70,7 @@ document.querySelector('.input').addEventListener('keypress', function(event) {
 });
 
 window.onload = function() {
-    startGame(); // Initialize the game
+    startGame(); 
     const thoughtsBox = document.querySelector('.thoughts');
     typeWriterEffect("Hmmm... I'm thinking of a number between 1 and 100, can you try to guess it?", thoughtsBox, 50); // Initial typing speed
 };
