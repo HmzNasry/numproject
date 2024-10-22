@@ -31,7 +31,7 @@ function game() {
 
     if (userInput === answer) {
         inputField.style.border = '2px solid green';
-        displayMessage(`You got it in ${numOfTries} tries! See if you can beat that!`);
+        displayMessage(`Woohoo got it in ${numOfTries} tries 🎉! See if you can beat that!`);
         setTimeout(function() {
             inputField.style.border = '';
             inputField.value = ""; 
