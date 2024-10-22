@@ -5,30 +5,330 @@
     font-family: 'Playfair Display', serif;
     padding: 10px;
     border-radius: 17px;
+    box-sizing: border-box; /* Added for better layout handling */
+}
+
+html, body {
+    height: 100%; /* Ensure both html and body take full height */
+    margin: 0; /* Remove default margin */
 }
 
 body {
-    width:100%;
-    height: 100%;
-    margin-top: 15%; /* Remove default body margin */
     display: flex;
     justify-content: center;
-    align-content: center;
-    background: linear-gradient(120deg, hotpink, blue);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    animation: gradient-rotation 10s linear infinite;
+    align-items: center;
+    background: linear-gradient(0deg, orange purple);
+    animation: gradient-rotation 20s linear infinite;
 }
-
+  
 @keyframes gradient-rotation {
     0% {
-      background: linear-gradient(0deg, hotpink, blue);
+        background: linear-gradient(0deg, orange purple);
+    }
+    1% {
+        background: linear-gradient(3.6deg, orange, purple);
+    }
+    2% {
+        background: linear-gradient(7.2deg, orange, purple);
+    }
+    3% {
+        background: linear-gradient(10.8deg, orange, purple);
+    }
+    4% {
+        background: linear-gradient(14.4deg, orange, purple);
+    }
+    5% {
+        background: linear-gradient(18deg, orange, purple);
+    }
+    6% {
+        background: linear-gradient(21.6deg, orange, purple);
+    }
+    7% {
+        background: linear-gradient(25.2deg, orange, purple);
+    }
+    8% {
+        background: linear-gradient(28.8deg, orange, purple);
+    }
+    9% {
+        background: linear-gradient(32.4deg, orange, purple);
+    }
+    10% {
+        background: linear-gradient(36deg, orange, purple);
+    }
+    11% {
+        background: linear-gradient(39.6deg, orange, purple);
+    }
+    12% {
+        background: linear-gradient(43.2deg, orange, purple);
+    }
+    13% {
+        background: linear-gradient(46.8deg, orange, purple);
+    }
+    14% {
+        background: linear-gradient(50.4deg, orange, purple);
+    }
+    15% {
+        background: linear-gradient(54deg, orange, purple);
+    }
+    16% {
+        background: linear-gradient(57.6deg, orange, purple);
+    }
+    17% {
+        background: linear-gradient(61.2deg, orange, purple);
+    }
+    18% {
+        background: linear-gradient(64.8deg, orange, purple);
+    }
+    19% {
+        background: linear-gradient(68.4deg, orange, purple);
+    }
+    20% {
+        background: linear-gradient(72deg, orange, purple);
+    }
+    21% {
+        background: linear-gradient(75.6deg, orange, purple);
+    }
+    22% {
+        background: linear-gradient(79.2deg, orange, purple);
+    }
+    23% {
+        background: linear-gradient(82.8deg, orange, purple);
+    }
+    24% {
+        background: linear-gradient(86.4deg, orange, purple);
+    }
+    25% {
+        background: linear-gradient(90deg, orange, purple);
+    }
+    26% {
+        background: linear-gradient(93.6deg, orange, purple);
+    }
+    27% {
+        background: linear-gradient(97.2deg, orange, purple);
+    }
+    28% {
+        background: linear-gradient(100.8deg, orange, purple);
+    }
+    29% {
+        background: linear-gradient(104.4deg, orange, purple);
+    }
+    30% {
+        background: linear-gradient(108deg, orange, purple);
+    }
+    31% {
+        background: linear-gradient(111.6deg, orange, purple);
+    }
+    32% {
+        background: linear-gradient(115.2deg, orange, purple);
+    }
+    33% {
+        background: linear-gradient(118.8deg, orange, purple);
+    }
+    34% {
+        background: linear-gradient(122.4deg, orange, purple);
+    }
+    35% {
+        background: linear-gradient(126deg, orange, purple);
+    }
+    36% {
+        background: linear-gradient(129.6deg, orange, purple);
+    }
+    37% {
+        background: linear-gradient(133.2deg, orange, purple);
+    }
+    38% {
+        background: linear-gradient(136.8deg, orange, purple);
+    }
+    39% {
+        background: linear-gradient(140.4deg, orange, purple);
+    }
+    40% {
+        background: linear-gradient(144deg, orange, purple);
+    }
+    41% {
+        background: linear-gradient(147.6deg, orange, purple);
+    }
+    42% {
+        background: linear-gradient(151.2deg, orange, purple);
+    }
+    43% {
+        background: linear-gradient(154.8deg, orange, purple);
+    }
+    44% {
+        background: linear-gradient(158.4deg, orange, purple);
+    }
+    45% {
+        background: linear-gradient(162deg, orange, purple);
+    }
+    46% {
+        background: linear-gradient(165.6deg, orange, purple);
+    }
+    47% {
+        background: linear-gradient(169.2deg, orange, purple);
+    }
+    48% {
+        background: linear-gradient(172.8deg, orange, purple);
+    }
+    49% {
+        background: linear-gradient(176.4deg, orange, purple);
+    }
+    50% {
+        background: linear-gradient(180deg, orange, purple);
+    }
+    51% {
+        background: linear-gradient(183.6deg, orange, purple);
+    }
+    52% {
+        background: linear-gradient(187.2deg, orange, purple);
+    }
+    53% {
+        background: linear-gradient(190.8deg, orange, purple);
+    }
+    54% {
+        background: linear-gradient(194.4deg, orange, purple);
+    }
+    55% {
+        background: linear-gradient(198deg, orange, purple);
+    }
+    56% {
+        background: linear-gradient(201.6deg, orange, purple);
+    }
+    57% {
+        background: linear-gradient(205.2deg, orange, purple);
+    }
+    58% {
+        background: linear-gradient(208.8deg, orange, purple);
+    }
+    59% {
+        background: linear-gradient(212.4deg, orange, purple);
+    }
+    60% {
+        background: linear-gradient(216deg, orange, purple);
+    }
+    61% {
+        background: linear-gradient(219.6deg, orange, purple);
+    }
+    62% {
+        background: linear-gradient(223.2deg, orange, purple);
+    }
+    63% {
+        background: linear-gradient(226.8deg, orange, purple);
+    }
+    64% {
+        background: linear-gradient(230.4deg, orange, purple);
+    }
+    65% {
+        background: linear-gradient(234deg, orange, purple);
+    }
+    66% {
+        background: linear-gradient(237.6deg, orange, purple);
+    }
+    67% {
+        background: linear-gradient(241.2deg, orange, purple);
+    }
+    68% {
+        background: linear-gradient(244.8deg, orange, purple);
+    }
+    69% {
+        background: linear-gradient(248.4deg, orange, purple);
+    }
+    70% {
+        background: linear-gradient(252deg, orange, purple);
+    }
+    71% {
+        background: linear-gradient(255.6deg, orange, purple);
+    }
+    72% {
+        background: linear-gradient(259.2deg, orange, purple);
+    }
+    73% {
+        background: linear-gradient(262.8deg, orange, purple);
+    }
+    74% {
+        background: linear-gradient(266.4deg, orange, purple);
+    }
+    75% {
+        background: linear-gradient(270deg, orange, purple);
+    }
+    76% {
+        background: linear-gradient(273.6deg, orange, purple);
+    }
+    77% {
+        background: linear-gradient(277.2deg, orange, purple);
+    }
+    78% {
+        background: linear-gradient(280.8deg, orange, purple);
+    }
+    79% {
+        background: linear-gradient(284.4deg, orange, purple);
+    }
+    80% {
+        background: linear-gradient(288deg, orange, purple);
+    }
+    81% {
+        background: linear-gradient(291.6deg, orange, purple);
+    }
+    82% {
+        background: linear-gradient(295.2deg, orange, purple);
+    }
+    83% {
+        background: linear-gradient(298.8deg, orange, purple);
+    }
+    84% {
+        background: linear-gradient(302.4deg, orange, purple);
+    }
+    85% {
+        background: linear-gradient(306deg, orange, purple);
+    }
+    86% {
+        background: linear-gradient(309.6deg, orange, purple);
+    }
+    87% {
+        background: linear-gradient(313.2deg, orange, purple);
+    }
+    88% {
+        background: linear-gradient(316.8deg, orange, purple);
+    }
+    89% {
+        background: linear-gradient(320.4deg, orange, purple);
+    }
+    90% {
+        background: linear-gradient(324deg, orange, purple);
+    }
+    91% {
+        background: linear-gradient(327.6deg, orange, purple);
+    }
+    92% {
+        background: linear-gradient(331.2deg, orange, purple);
+    }
+    93% {
+        background: linear-gradient(334.8deg, orange, purple);
+    }
+    94% {
+        background: linear-gradient(338.4deg, orange, purple);
+    }
+    95% {
+        background: linear-gradient(342deg, orange, purple);
+    }
+    96% {
+        background: linear-gradient(345.6deg, orange, purple);
+    }
+    97% {
+        background: linear-gradient(349.2deg, orange, purple);
+    }
+    98% {
+        background: linear-gradient(352.8deg, orange, purple);
+    }
+    99% {
+        background: linear-gradient(356.4deg, orange, purple);
     }
     100% {
-      background: linear-gradient(360deg, hotpink, blue);
+        background: linear-gradient(360deg, orange, purple);
     }
-  }
+}
+
+
+
 
 .container {
     display: flex;
@@ -37,7 +337,6 @@ body {
     align-items: center;
     width: 500px;
     border-radius: 10px;
-    border: 2px solid red;
 }
 
 .input {
@@ -45,6 +344,9 @@ body {
     height: 15.5%;
     text-align: center;
     font-size: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid black
+
 }
 
 .button {
@@ -53,7 +355,7 @@ body {
     height: 20%;
     background-color: black;
     color: white;
-    border: 0px solid black;
+    border: none; /* Change to none for no border */
 }
 
 .button:hover {
@@ -68,6 +370,28 @@ body {
     font-size: 40px;
 }
 
-#character {
-    border: 2px solid red;
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    border-radius: 10px;
 }
+
+.thoughts {
+    width: auto; 
+    max-width: 70%;
+    min-height: 50px; 
+    margin: 10px 0; 
+    padding: 10px; 
+    text-align: center;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    white-space: normal;
+    overflow: hidden; 
+}
+
