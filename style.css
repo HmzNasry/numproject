@@ -5,12 +5,12 @@
     font-family: 'Playfair Display', serif;
     padding: 10px;
     border-radius: 17px;
-    box-sizing: border-box; /* Added for better layout handling */
+    box-sizing: border-box; 
 }
 
 html, body {
-    height: 100%; /* Ensure both html and body take full height */
-    margin: 0; /* Remove default margin */
+    height: 100%; 
+    margin: 0; 
 }
 
 body {
@@ -18,7 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(0deg, orange purple);
-    animation: gradient-rotation 20s linear infinite;
+    animation: gradient-rotation 10s linear infinite;
 }
   
 @keyframes gradient-rotation {
@@ -355,7 +355,7 @@ body {
     height: 20%;
     background-color: black;
     color: white;
-    border: none; /* Change to none for no border */
+    border: none; 
 }
 
 .button:hover {
@@ -394,4 +394,11 @@ body {
     white-space: normal;
     overflow: hidden; 
 }
+
+img {
+    display: block;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); /* Masking gradient for WebKit */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); /* Standard mask for other browsers */
+}
+
 
